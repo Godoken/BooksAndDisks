@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Books And Disks</string>
+    <string name="on_back_pressed">Вы действительно хотите выйти?</string>
+    <string name="yes">Да</string>
+    <string name="no">Нет</string>
+    <string name="error_event_list_clear">Список пуст</string>
+    <string name="error_events_list_server">Ошибка базы данных</string>
 </resources>
