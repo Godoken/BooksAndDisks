@@ -5,7 +5,8 @@ import com.example.booksanddisks.features.products.domain.model.diskModels.diskI
 class DiskDVDImpl (var barCode: String,
                    val title: String,
                    val price: Double,
-                   val content: String) : DiskDVD {
+                   val content: String,
+                   val diskType: String) : DiskDVD {
     override fun getProductBarCode(): String {
         return barCode
     }

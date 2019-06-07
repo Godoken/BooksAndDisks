@@ -8,6 +8,8 @@ class BookMagic (var barCode: String,
                 val pageCount: Int,
                  val minAge: Int) : Book {
 
+    private val bookContent: String = "Эзотерика"
+
     override fun getBookPageCount(): Int {
         return pageCount
     }
@@ -17,7 +19,7 @@ class BookMagic (var barCode: String,
     }
 
     override fun getProductSubtitle(): Any {
-        return minAge
+        return bookContent
     }
 
     override fun getProductPrice(): Double {

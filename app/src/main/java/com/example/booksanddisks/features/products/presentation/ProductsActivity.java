@@ -1,18 +1,21 @@
 package com.example.booksanddisks.features.products.presentation;
 
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.example.booksanddisks.R;
+import com.example.booksanddisks.features.information.presentation.InformationActivity;
 import com.example.booksanddisks.features.products.domain.Product;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import static com.example.booksanddisks.features.products.presentation.PresenterFactory.getPresenter;
@@ -29,7 +32,6 @@ public class ProductsActivity extends AppCompatActivity implements ProductsListV
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         productsActivityPresenter = getPresenter();
-
 
 
         initView();
@@ -83,9 +85,7 @@ public class ProductsActivity extends AppCompatActivity implements ProductsListV
         AlertDialog.Builder quitDialog = new AlertDialog.Builder(
                 this);
         quitDialog.setTitle(R.string.on_back_pressed);
-
         quitDialog.setPositiveButton(R.string.yes, (dialog, which) -> finish());
-
         quitDialog.setNegativeButton(R.string.no, (dialog, which) -> {
         });
         quitDialog.show();
@@ -102,7 +102,9 @@ public class ProductsActivity extends AppCompatActivity implements ProductsListV
     }
 
     @Override
-    public void loadInformation(Product product) {
-
+    public void loadInformation(ArrayList<String> list) {
+        Intent intent = new Intent(this, InformationActivity.class);
+        intent.putExtra("information", list);
+        startActivity(intent);
     }
 }

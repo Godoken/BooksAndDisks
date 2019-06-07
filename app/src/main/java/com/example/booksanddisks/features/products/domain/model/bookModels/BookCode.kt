@@ -8,6 +8,8 @@ class BookCode (var barCode: String,
                 val pageCount: Int,
                 val language: String) : Book {
 
+    private val bookContent: String = "Программирование"
+
     override fun getBookPageCount(): Int {
         return pageCount
     }
@@ -17,7 +19,7 @@ class BookCode (var barCode: String,
     }
 
     override fun getProductSubtitle(): Any {
-        return language
+        return bookContent
     }
 
     override fun getProductPrice(): Double {

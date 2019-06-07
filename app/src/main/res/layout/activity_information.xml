@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:outlineSpotShadowColor="@android:color/background_light">
+
+        <TextView
+            android:id="@+id/hintName"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:text="@string/hint_title"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text=""
+            android:textSize="18sp" />
+
+
+        <TextView
+            android:id="@+id/hintSubtitle"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:text="@string/hint_subtitle"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/subtitle"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text=""
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/hintPrice"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:text="@string/hint_price"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text=""
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/hintImportant"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:text="@string/hint_about_product"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/important"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text=""
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/hintBarcode"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:text="@string/bar_code"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/barcode"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text=""
+            android:textSize="18sp" />
+
+
+        <ProgressBar
+            android:id="@+id/informationProgress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />
+
+    </LinearLayout>
+
+</ScrollView>

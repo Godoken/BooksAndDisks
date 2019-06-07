@@ -4,4 +4,5 @@ import io.reactivex.Single
 
 interface ProductsInteractor {
     fun loadProducts(): Single<List<Product>>
+    fun getInformation(product: Product): ArrayList<String>
 }

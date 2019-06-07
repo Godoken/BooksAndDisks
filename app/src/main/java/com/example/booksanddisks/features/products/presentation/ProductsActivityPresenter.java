@@ -69,8 +69,9 @@ public class ProductsActivityPresenter {
 
     public void onProductSelected(Product product) {
         view.showProgress();
-        view.loadInformation(product);
+        view.loadInformation(productsInteractor.getInformation(product));
         view.hideProgress();
+
     }
 
     public void onBackPressed() {
